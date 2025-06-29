@@ -1,0 +1,19 @@
+sentence-transformers==2.2.2
+langchain
+flask
+Flask-Login
+langchain-groq
+gTTS
+speechrecognition
+pydub
+plotly
+pandas
+pinecone-client
+pypdf
+python-dotenv
+pinecone[async]==6.0.2
+langchain-pinecone
+langchain_community
+langchain_huggingface
+langchain_experimental
+-e .

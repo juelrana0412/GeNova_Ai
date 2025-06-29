@@ -1,0 +1,8 @@
+setup.py
+GeNova_Ai.egg-info/PKG-INFO
+GeNova_Ai.egg-info/SOURCES.txt
+GeNova_Ai.egg-info/dependency_links.txt
+GeNova_Ai.egg-info/top_level.txt
+src/__init__.py
+src/helper.py
+src/prompt.py

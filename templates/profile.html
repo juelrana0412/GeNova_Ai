@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .profile-box {
+      background: #fff;
+      padding: 40px;
+      width: 100%;
+      max-width: 420px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .profile-icon {
+      font-size: 64px;
+      color: #4db6ac;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      color: #555;
+      margin: 8px 0;
+    }
+    .btn {
+      display: inline-block;
+      margin: 12px 6px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn-chat {
+      background-color: #4db6ac;
+    }
+    .btn-chat:hover {
+      background-color: #399b90;
+    }
+    .btn-logout {
+      background-color: #e74c3c;
+    }
+    .btn-logout:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-box">
+    <div class="profile-icon">
+      <i class="fas fa-user-circle"></i>
+    </div>
+    <h2>User Profile</h2>
+    <p><strong>Full Name:</strong> {{ full_name }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <a href="/" class="btn btn-chat"><i class="fas fa-comments"></i> Back to Chat</a>
+    <a href="/logout" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat History</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      padding: 40px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #4db6ac;
+    }
+    .chat-entry {
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+    }
+    .chat-entry:last-child {
+      border-bottom: none;
+    }
+    .timestamp {
+      color: gray;
+      font-size: 0.9rem;
+    }
+    .back {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .back a {
+      color: #4db6ac;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Your Chat History</h2>
+    {% if chats %}
+      {% for chat in chats %}
+        <div class="chat-entry">
+          <p><strong>Q:</strong> {{ chat.question }}</p>
+          <p><strong>A:</strong> {{ chat.response }}</p>
+          <p class="timestamp">{{ chat.timestamp }}</p>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No history found.</p>
+    {% endif %}
+    <div class="back">
+      <a href="/">← Back to Chat</a>
+    </div>
+  </div>
+</body>
+</html>
